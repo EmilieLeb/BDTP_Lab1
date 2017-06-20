@@ -1,0 +1,39 @@
+[cloudera@quickstart ~]$ hadoop fs -rm -r wget
+Deleted wget
+[cloudera@quickstart ~]$ wget http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+--2017-06-19 13:04:36--  http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+Resolving www.textfiles.com... failed: Temporary failure in name resolution.
+wget: unable to resolve host address “www.textfiles.com”
+[cloudera@quickstart ~]$ wget http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+--2017-06-19 13:05:39--  http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+Resolving www.textfiles.com... failed: Temporary failure in name resolution.
+wget: unable to resolve host address “www.textfiles.com”
+[cloudera@quickstart ~]$ wget http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+--2017-06-19 13:18:22--  http://www.textfiles.com/etext/FICTION/defoe-robinson-103.txt
+Resolving www.textfiles.com... 208.86.224.90
+Connecting to www.textfiles.com|208.86.224.90|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 624405 (610K) [text/plain]
+Saving to: “defoe-robinson-103.txt”
+
+100%[======================================>] 624,405      865K/s   in 0.7s    
+
+2017-06-19 13:18:23 (865 KB/s) - “defoe-robinson-103.txt” saved [624405/624405]
+
+[cloudera@quickstart ~]$ hadoop fs -copyFromLocal defoe-robinson-103.txt input
+
+[cloudera@quickstart ~]$ 
+[cloudera@quickstart ~]$ wget http://www.textfiles.com/etext/FICTION/callwild
+--2017-06-19 13:19:12--  http://www.textfiles.com/etext/FICTION/callwild
+Resolving www.textfiles.com... 208.86.224.90
+Connecting to www.textfiles.com|208.86.224.90|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 175998 (172K)
+Saving to: “callwild”
+
+100%[======================================>] 175,998      384K/s   in 0.4s    
+
+2017-06-19 13:19:13 (384 KB/s) - “callwild” saved [175998/175998]
+
+[cloudera@quickstart ~]$ hadoop fs -copyFromLocal callwild input
+[cloudera@quickstart ~]$ 

@@ -1,0 +1,1 @@
+We did implemented the same TFIDF methodology as in the provided graph. However, we did not automatically sort the results, we did so simply by simply sorting with excel. The results can be found in the finalOutput folder. 

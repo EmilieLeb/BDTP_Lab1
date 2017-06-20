@@ -1,0 +1,1 @@
+We did not manage to implement the PageRank algorithm because we could not reuse the temporary output file stored in the HDFS in our code (error message saying the file did not exist, when it did). The temporary output file can be found in PR1result_part-r-00000.  

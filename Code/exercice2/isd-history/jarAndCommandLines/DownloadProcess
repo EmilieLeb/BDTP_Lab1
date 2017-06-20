@@ -1,0 +1,5 @@
+[cloudera@quickstart Data]$ curl https://www1.ncdc.noaa.gov/pub/data/noaa/isd-history.txt > isd-history.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 2929k  100 2929k    0     0   574k      0  0:00:05  0:00:05 --:--:--  752k
+[cloudera@quickstart isd-history]$ 
